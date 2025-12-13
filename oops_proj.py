@@ -1,10 +1,30 @@
 class chatbook:
+    __user_id =1
     def __init__(self):
+        self.id = chatbook.__user_id
+        self.__name = "Default user"      
+        chatbook.__user_id += 1
         self.username = ''
         self.password = ''
         self.loggedin = False
-        self.menu()
+        # self.menu()
+
+    @staticmethod
+    def get_id():
+     return chatbook.__user_id
+
+    @staticmethod
+    def set_id(value):
+     chatbook.__user_id = value
+
+    
         
+    def get_name(self):
+        return self.__name
+    
+    def set_name(self,value):
+        self.__name= value
+
 
     def menu(self):
         user_input= input("""Welcome to chatbook !! How would you like to proceed?
@@ -37,7 +57,7 @@ class chatbook:
         self.password = pwd
         print('You have signed up successfully')
         print('\n')
-        self.menu()
+        # self.menu()
     
     def signin(self):
         if self.username =="" and  self.password =='':
@@ -51,7 +71,7 @@ class chatbook:
             else:
                 print("Please input the creditals")   
         print("\n")
-        self.menu()
+        # self.menu()
 
     def my_post(self):
         if self.loggedin==True:
@@ -60,7 +80,7 @@ class chatbook:
         else:
             print("Firstly signin/signup to write the post")  
         print("\n")
-        self.menu()  
+        # self.menu()  
 
     def sendmsg(self):
         if self.loggedin==True:
@@ -70,7 +90,7 @@ class chatbook:
         else:
             print("Firstly signin/signup the message")
         print("\n")
-        self.menu()        
+        # self.menu()        
 
 
-obj = chatbook()   
+# obj = chatbook()   

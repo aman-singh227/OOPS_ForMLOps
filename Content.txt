@@ -9,6 +9,14 @@
     --> Debugging
     --> Easy to colab
 5. End to end Project (Chatbook class)
+     > Function V/S methods
+     > Magic method or dunder method
+     > self implementation
+     > You can create a attribute as well
+
+6. Interview questions :-     
     -- encapsulation
     -- getter and setter
     -- static method  
+
+7. Inheritance
